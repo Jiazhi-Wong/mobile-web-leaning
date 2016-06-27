@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var iScale = 1;
+		iScale = iScale / window.devicePixelRatio;
+		document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=' + iScale + ', minimum-scale=' + iScale + ', maximum-scale=' + iScale + '">')
+	</script>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		div {
+			width: 400px;
+			height: 400px;
+			background: orange;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div>你们看得见我吗？</div>
+</body>
+</html>
