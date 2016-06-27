@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var iScale = 1;
+		iScale = iScale / window.devicePixelRatio;
+		document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=' + iScale + ', minimum-scale=' + iScale + ', maximum-scale=' + iScale + '">')
+	</script>
+	<style>
+		html {
+			width: 100%;
+			height: 100%;	/*父级元素是document，百分百是根据父级元素去设置的*/
+			overflow: hidden;	/*取消html上的滚动条,可以实现头尾固定*/
+		}
+		
+		body {
+			width: 100%;
+			height: 100%;	/*父级元素是html*/
+			margin: 0;
+			font: 68px "微软雅黑";
+			overflow: auto;		/*在body上设置滚动条,滚动显示section的内容*/
+		}
+		
+		header {
+			position: absolute;		/*定位于document*/
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100px;
+			background: pink;
+		}
+
+		footer {
+			position: absolute;		/*定位于document*/
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100px;
+			background: palegreen;
+		}
+		
+		section {
+			margin: 100px 0;
+			height: 3000px;
+		}
+		
+	</style>
+	<!--
+			安卓X5内核浏览器
+			
+			用绝对定位可能导致该效果失效
+			用固定定位那么该效果可以实现，但是在老版本系统下会存在兼容性问题
+		-->
+</head>
+<body>
+	<header>头部 - 固定</header>
+	<section>
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+		内容 - 滚动<br />
+	</section>
+	<footer>尾部 - 固定</footer>
+	<!--<div>你们看得见我吗？</div>-->
+</body>
+</html>
